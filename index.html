@@ -3,9 +3,9 @@
 var currentUrl = window.location.href;
 
 // Function to decode base64 encoded string
-//function decodeBase64(encodedString) {
-   // return atob(encodedString);
-//}
+function decodeBase64(encodedString) {
+   return atob(encodedString);
+}
 
 // Extract the email address from the URL using a regular expression
 var email = currentUrl.match(/[?&#]([^=]*)=([^&]*)/);
